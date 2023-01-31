@@ -1,7 +1,8 @@
-@import "scss/fontawesome.scss";
-@import "scss/brands.scss";
+@import "scss/fontawesome";
+@import "scss/brands";
 @import './_variables'; 
-@import "./mixins.scss";
+@import "./mixins";
+@import "menu";
 * {
     box-sizing: border-box;
 }
