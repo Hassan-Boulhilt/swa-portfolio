@@ -1,6 +1,3 @@
-
-@import "_variables";
-
 @mixin easOut {
     transition: all .5s ease-out;
 }
@@ -22,5 +19,45 @@
             background: rgb($primary-color, $background-opacity);
             z-index: -1;
         }
+    }
+}
+// Media Smal <= 500
+
+@mixin mediaSm {
+    @media screen and (max-width:500px)  {
+        @content;
+    }
+    
+}
+// Mobile landscape (480x320)
+
+@mixin mediaLandscape {
+    @media screen and (orientation:landscape) and (max-width:500px) {
+        @content;
+    }
+    
+}
+
+
+// Media Medium <= 768
+
+@mixin mediaMd {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+}
+
+// Media Large >= 769
+
+@mixin mediaLg{
+    @media screen and (min-width:769px)  and (max-width:1170px) {
+        @content;
+    }
+}
+// Media ExtraLarge >= 1170
+
+@mixin mediaXL{
+    @media screen and (min-width:1171px)  {
+        @content;
     }
 }

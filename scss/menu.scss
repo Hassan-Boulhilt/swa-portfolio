@@ -1,3 +1,5 @@
+@import "mixins";
+@import "_variables";
 .menu-btn {
     position: absolute;
     z-index: 3;
@@ -90,7 +92,7 @@
             background-color: black;
             background: $portrait-image;
             border-radius: 50%;
-            background-size: 100%;
+            background-size: contain;
             border: solid 3px $secondary-color;
             
         }
