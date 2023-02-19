@@ -1,0 +1,197 @@
+@import "scss/fontawesome";
+@import "scss/brands";
+@import "scss/solid";
+@import './_variables'; 
+@import "./mixins";
+@import "menu";
+
+* {
+    box-sizing: border-box;
+}
+body {
+    @include background;
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+// Headings
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 4rem;
+
+    }
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgb(lighten($primary-color,2), 0.5);
+    }
+
+}
+a {
+    color:set-text-color($primary-color);
+    text-decoration: none;
+}
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+main {
+    padding: 4rem;
+    min-height: calc(100vh - 60px);
+
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.5rem;
+
+            &:hover {
+                color: $secondary-color;
+                @include easOut;
+                
+            }
+        }
+    }
+    &#home {
+        overflow: hidden;
+
+        h1 {
+            margin-top: 20vh;
+        }
+
+    }
+}
+.text-secondary {
+    color: $secondary-color;
+    font-weight: 500;
+    
+}
+
+// About style
+
+.about-info {
+    display: grid;
+    gap:2rem;
+    grid-template-areas:'bioimage bio bio'
+                        'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
+
+    .bio-image {
+        grid-area: bioimage;
+        margin: auto;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border:solid 3px $secondary-color;
+    
+    }
+    .bio {
+        grid-area: bio;
+    
+    }
+    .job-1 {
+        grid-area: job1;
+    }
+    .job-2 {
+        grid-area: job2;
+    }
+    .job-3 {
+        grid-area: job3;
+    }
+    .job {
+        background: lighten($primary-color,5);
+        padding: 1rem;
+        border-bottom:solid 3px $secondary-color;
+    }
+}
+// Project
+.projects {
+    display: grid;
+    gap:1rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border: 3px #fff solid;
+
+        &:hover {
+            opacity: 0.5;
+            border-color: $secondary-color;
+            @include easOut;
+        }
+    }
+}
+// Button projects
+
+.btn {
+    display: block;   
+    text-align: center;        
+    border:0;
+    margin-bottom:0.3rem;
+
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+}
+.btn-light {    
+    
+    @extend .btn;
+    background: lighten($primary-color, 50);
+    color:#333;
+}
+.btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 50);
+    color:#fff;
+}
+
+// Contact page
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    div {
+        font-size:2rem;
+        border: 3px #fff solid;
+        padding: .5rem 1rem;
+        margin-bottom: 1.5rem;
+        @include easOut;
+
+        &:hover {
+            padding:.5rem 1.5rem;
+            background-color: $secondary-color;
+            color:set-text-color($secondary-color);
+
+            span {
+                color:set-text-color($secondary-color);
+            }
+
+        }
+
+    }
+}
+// Main footer
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color:set-text-color($primary-color);
+    height: 60px;
+
+}
+@import "mobile";
