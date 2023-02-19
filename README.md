@@ -1,2 +1,2 @@
 # swa-portfolio
-# [Demo](https://hassan-boulhilt.github.io/swa-portfolio/){target="_blank"}
+# <a href="http://example.com" target="_blank" rel="noopener">Demo</a>
