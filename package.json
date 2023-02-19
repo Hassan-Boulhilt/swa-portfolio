@@ -10,6 +10,14 @@
   "author": "Hassan Boulhilt",
   "license": "MIT",
   "dependencies": {
-    "sass": "^1.57.1"
-  }
+    "sass": "^1.58.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hassan-Boulhilt/swa-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hassan-Boulhilt/swa-portfolio/issues"
+  },
+  "homepage": "https://github.com/Hassan-Boulhilt/swa-portfolio#readme"
 }

@@ -1,6 +1,6 @@
 @import "scss/fontawesome";
 @import "scss/brands";
-@import "scss/solid.scss";
+@import "scss/solid";
 @import './_variables'; 
 @import "./mixins";
 @import "menu";
@@ -135,8 +135,8 @@ main {
 // Button projects
 
 .btn {
-    display: block;
-    padding: .5rem 1rem;
+    display: block;   
+    text-align: center;    
     border:0;
     margin-bottom:0.3rem;
 
@@ -145,18 +145,18 @@ main {
         color: set-text-color($secondary-color);
     }
 }
-.btn-light {
+.btn-light {    
+    
     @extend .btn;
     background: lighten($primary-color, 50);
     color:#333;
-
 }
 .btn-dark {
     @extend .btn;
     background: darken($primary-color, 50);
     color:#fff;
-
 }
+
 // Contact page
 .boxes {
     display: flex;
